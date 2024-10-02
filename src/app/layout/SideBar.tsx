@@ -1,6 +1,4 @@
-import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useAppSelector } from "../../app/hooks";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsHospital } from "react-icons/bs";
 import { FaRegHospital, FaUserNurse } from "react-icons/fa";
@@ -10,7 +8,8 @@ import {
   MdOutlineScreenSearchDesktop,
 } from "react-icons/md";
 import { RiDonutChartFill } from "react-icons/ri";
-import LogoutButton from "../../components/common/LogoutButton";
+import { NavLink } from "react-router-dom";
+import { useAppSelector } from "../../app/hooks";
 import "./Sidebar.css";
 
 function SideBar() {
@@ -53,13 +52,12 @@ function SideBar() {
           <RiDonutChartFill className="text-Main w-8 h-8" />
         </li>
         {sidebar.map((e, i) => (
-          <li key={i} className="mb-2 pl-4">
+          <li key={i} className="mb-2 md:pl-4">
             <NavLink
               to={e.link}
               className="flex items-center hover:bg-[#f5f6fa] hover:text-white py-2 px-4 rounded-l-full transition-all"
-              // activeClassName="active"
             >
-              <e.icon className="w-5 h-5 text-gray-400 max-md:w-7 max-md:h-7" />
+              <e.icon className="w-5 h-5 max-md:w-7 max-md:h-7" />
               <span className="ml-3 text-sm max-md:hidden">{e.name}</span>
             </NavLink>
           </li>

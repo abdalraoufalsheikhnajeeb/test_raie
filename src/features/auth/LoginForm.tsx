@@ -45,7 +45,7 @@ const LoginForm = () => {
       await dispatch(
         login({ username: data.usernameOrPhone, password: data.password })
       ).unwrap();
-      navigate("/");
+      navigate("/home");
     } catch (err: any) {
       setLoginError(t("login_failed"));
     } finally {
@@ -83,7 +83,7 @@ const LoginForm = () => {
             placeholder={t("login_password")}
             className="w-full py-3 focus:outline-none"
           />
-          <div className="absolute w-8 h-3 right-3 top-3 cursor-pointer text-gray-500">
+          <div className="absolute w-8 h-3 end-3 top-3 cursor-pointer text-gray-500">
             <Show onClick={() => setShowPassword(!showPassword)} size={22} />
           </div>
         </label>

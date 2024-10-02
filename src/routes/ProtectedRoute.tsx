@@ -7,7 +7,7 @@ const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
   const accessToken = useAppSelector((state) => state.auth.accessToken);
 
   if (!accessToken) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return children;

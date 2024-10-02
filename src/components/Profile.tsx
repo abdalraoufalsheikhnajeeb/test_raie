@@ -26,11 +26,11 @@ function Profile() {
           alt=""
           className="w-full h-[200px] object-fill rounded-xl"
         />
-        <div className="bg-Main text-white py-3 px-4 rounded-l-full w-fit absolute bottom-7 right-0">
+        <div className="bg-Main text-white py-3 px-4 rounded-l-full w-fit absolute bottom-7 end-0">
           <FaCamera />
         </div>
       </div>
-      <div className="pl-2 bg-white my-7">
+      <div className="ps-2 bg-white my-7">
         <h2 className="text-Secondary font-semibold">{profile?.username}</h2>
         <p className="text-gray-300 w-[96%]">
           Lorem ipsum dolor sit amet, consectetur

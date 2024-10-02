@@ -43,7 +43,7 @@ const Accordion = ({ list, name }: AccordionProps) => {
               accordionOpen ? "rotate-180 text-Main" : "rotate-0"
             }`}
           />
-          <span className="ml-2 text-Secondary">{name}</span>
+          <span className="ms-2 text-Secondary">{name}</span>
         </div>
         <Actions />
       </button>

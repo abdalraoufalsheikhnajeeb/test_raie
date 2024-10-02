@@ -24,13 +24,13 @@ const Popup: FC<PopupProps> = ({ description, onClick, children }) => {
     return (
       <>
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-30 z-40"
+          className="fixed top-0 start-0 w-full h-full bg-black bg-opacity-30 z-40"
           onClick={() => setIsConfirming(false)}
         ></div>
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 max-sm:w-[90%] mx-auto"
+          className="fixed top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 z-50 max-sm:w-[90%] mx-auto"
         >
           <div
             data-aos="zoom-in"
