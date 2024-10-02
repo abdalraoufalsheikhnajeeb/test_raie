@@ -1,7 +1,5 @@
-import Aos from "aos";
 import { useEffect, useState, FC } from "react";
 import MainButton from "./MainButton";
-import { useTranslation } from "react-i18next";
 
 interface IconProps {
   size: number;
@@ -15,11 +13,9 @@ interface PopupProps {
 }
 
 const Popup: FC<PopupProps> = ({ description, onClick, children }) => {
-  const { t } = useTranslation();
+
   const [isConfirming, setIsConfirming] = useState<boolean>(false);
-  useEffect(() => {
-    Aos.init();
-  }, []);
+
   const renderModal = () => {
     return (
       <>
@@ -33,18 +29,17 @@ const Popup: FC<PopupProps> = ({ description, onClick, children }) => {
           className="fixed top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 z-50 max-sm:w-[90%] mx-auto"
         >
           <div
-            data-aos="zoom-in"
-            data-aos-duration="200"
+            
             className="bg-white rounded-3xl px-2 py-7 min-w-[200px]"
           >
             <p className="font-semibold text-2xl text-center px-4 mb-5">
               {description}
             </p>
             <div className="w-[180px] mx-auto flex items-center justify-center gap-2">
-              <MainButton onClick={onClick} title={t("Sure")} />
+              <MainButton onClick={onClick} title="Sure" />
               <MainButton
                 onClick={() => setIsConfirming(false)}
-                title={t("Cancel")}
+                title="Cancel"
               />
             </div>
           </div>
