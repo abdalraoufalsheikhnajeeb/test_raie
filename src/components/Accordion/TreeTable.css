@@ -1,0 +1,49 @@
+.custom-tree .ant-tree-treenode {
+  padding: 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-tree .ant-tree-treenode:hover {
+  background-color: #f5f5f5;
+}
+
+/* Style for child nodes */
+.custom-tree .ant-tree-treenode .ant-tree-treenode-leaf {
+  background-color: #f9fafb; /* Light background */
+  padding: 10px 20px; /* Indent child nodes */
+  position: relative;
+}
+
+.custom-tree .ant-tree-treenode-leaf:hover {
+  background-color: #e8f3ff; /* Light blue background on hover */
+}
+
+.custom-tree .ant-tree-checkbox {
+  margin-right: 12px;
+}
+
+/* Blue accent line on hover and when selected */
+.custom-tree .ant-tree-treenode-leaf:hover::before,
+.custom-tree .ant-tree-checkbox-checked::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background-color: #1890ff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.custom-tree .ant-tree-checkbox-inner {
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 2px solid #1890ff; /* Blue border for checkbox */
+}
+
+/* When checkbox is checked, make the checkbox blue */
+.custom-tree .ant-tree-checkbox-checked .ant-tree-checkbox-inner {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}

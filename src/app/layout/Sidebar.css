@@ -1,0 +1,91 @@
+:root {
+  --primary: #3b86ff;
+  --color-main: #e1e1e1;
+}
+
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 3px var(--color-main);
+  pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 3px var(--color-main);
+  pointer-events: none;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: var(--primary);
+}
+
+/* Active state */
+.navigation ul li a.active {
+  background-color: var(--color-main);
+  color: var(--primary);
+}
+
+/* Hover effects */
+.navigation ul li a:hover {
+  background-color: var(--color-main);
+  color: var(--primary);
+}
+/* Hover effects */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before,
+.navigation ul li a.active::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 3px var(--color-main);
+  pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after,
+.navigation ul li a.active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 3px var(--color-main);
+  pointer-events: none;
+}
+
+/* Normal NavLink styles */
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: var(--color-third);
+}
